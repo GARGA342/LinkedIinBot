@@ -23,7 +23,7 @@ class Bot():
             print("Não foi possível acessar o site")
             exit(1) 
 
-    def login():
+    def login(self):
         print(f'\n\nSeu login deve ser feito manualmente. Assim que logar, tecle ENTER.\n\n')
         input()
         sleep(randint(1, 4))
@@ -37,7 +37,7 @@ class Bot():
             print(f'Não foi possível encontrar o elemento \n\t{elem}')
             return False
 
-    def clickElement(elem) -> bool:
+    def clickElement(self, elem) -> bool:
         try:
             elem.click()
             sleep(randint(1, 4))
@@ -52,7 +52,7 @@ class Bot():
 bot = Bot()
 
 #Open website -> "https://br.linkedin.com/"
-bot.getPage("https://br.linkedin.com/?original_referer=")
+bot.getPage("https://br.linkedin.com")
 
 #Enter login manually
 bot.login()
